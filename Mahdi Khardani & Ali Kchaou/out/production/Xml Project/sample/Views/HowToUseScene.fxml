@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="418.0" minWidth="500.0" prefHeight="444.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.HowToUseController">
+   <children>
+      <Label layoutX="14.0" layoutY="2.0" text="Steps:">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="28.0" layoutY="268.0" text="Or" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button fx:id="closeButton" layoutX="445.0" layoutY="419.0" mnemonicParsing="false" onAction="#closeButtonClicked" text="Close" />
+      <Pane layoutX="3.0" layoutY="25.0" prefHeight="221.0" prefWidth="487.0">
+         <children>
+            <Label layoutX="9.0" layoutY="6.0" text="Step1" underline="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="73.0" text="Step 2" underline="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="155.0" text="Step 3" underline="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="-10.0" prefHeight="69.0" prefWidth="393.0" text="You import your xml file via the menu bar: File -&gt; Import XLM File or by dragging and dropping the XML file directly in its specified text area" wrapText="true" />
+            <Label layoutX="71.0" layoutY="66.0" prefHeight="69.0" prefWidth="393.0" text="You import your xquery file via the menu bar: File -&gt; Import XQUERY File or by dragging and dropping the XQUERY file directly in its specified text area" wrapText="true" />
+            <Label layoutX="71.0" layoutY="148.0" prefHeight="69.0" prefWidth="393.0" text="You have the ability to implement/edit your imported files either by clicking in the text areas or by clicking the edit menu bar and select wich file to edit" wrapText="true" />
+         </children>
+      </Pane>
+      <Pane layoutX="65.0" layoutY="246.0" prefHeight="87.0" prefWidth="393.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="69.0" prefWidth="347.0" text="You can create your files immediately by typing a proper inputs to each file than you will have to save your files so they get executed properly" wrapText="true" />
+         </children>
+      </Pane>
+      <Label layoutX="12.0" layoutY="341.0" text="Finally" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="372.0" prefHeight="40.0" prefWidth="411.0" text="The run button gets enabled (Clickable), Clicking it will execute the xquery file on the xml file and the result will be printed in the evaluation text area." wrapText="true" />
+   </children>
+</AnchorPane>

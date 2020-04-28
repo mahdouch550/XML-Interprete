@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="out/artifacts/untitled_jar/XML&amp;XQUERY INTERPRETER.jar"/>
+	<classpathentry kind="lib" path="out/artifacts/XML&amp;XQUERY INTERPRETER-InteliiJ.jar/untitled.jar"/>
+	<classpathentry kind="lib" path="out/artifacts/XML&amp;XQUERY INTERPRETER-InteliiJ.jar/XML&amp;XQUERY INTERPRETER-InteliiJ.jar"/>
+	<classpathentry kind="output" path="out/production/Xml Project"/>
+</classpath>

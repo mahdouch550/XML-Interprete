@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="XML&amp;XQUERY INTERPRETER-InteliiJ">
+    <output-path>$USER_HOME$/Desktop/What I Did/XML</output-path>
+    <root id="archive" name="untitled.jar">
+      <element id="module-output" name="Xml Project" />
+      <element id="extracted-dir" path="D:/BUREAU/el 9raya/MRI 1/Semestre2/Documents semi-structurés/Compte Rendu/saxon8.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

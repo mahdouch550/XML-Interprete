@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="mainPane" focusTraversable="true" maxHeight="768.0" maxWidth="1366.0" minHeight="487.0" minWidth="768.0" prefHeight="631.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainController">
+   <children>
+      <Button fx:id="run" contentDisplay="CENTER" disable="true" layoutX="901.0" layoutY="287.0" mnemonicParsing="false" onMouseClicked="#runButtonClicked" prefHeight="25.0" prefWidth="113.0" text="Run" />
+      <Label fx:id="evaluationLabel" contentDisplay="CENTER" layoutX="510.0" layoutY="277.0" prefHeight="45.0" prefWidth="128.0" text="Evaluation" textAlignment="CENTER" textFill="#e80800" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="510.0" layoutY="316.0" prefHeight="245.0" prefWidth="503.0">
+         <content>
+            <TextArea id="resultTextArea" fx:id="resultTextArea" editable="false" prefHeight="243.0" prefWidth="501.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="closeButton" layoutX="903.0" layoutY="592.0" mnemonicParsing="false" onMouseClicked="#closeButtonClicked" prefHeight="25.0" prefWidth="111.0" text="Close" />
+      <Button fx:id="resetButton" layoutX="783.0" layoutY="592.0" mnemonicParsing="false" onMouseClicked="#resetButtonClicked" prefHeight="25.0" prefWidth="111.0" text="Reset" />
+      <ImageView fitHeight="16.0" fitWidth="25.0" layoutX="134.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" fx:id="xmlLoaded">
+         <image>
+            <Image url="@../../../téléchargement.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="25.0" layoutX="655.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" fx:id="xqueryLoaded">
+         <image>
+            <Image url="@../../../téléchargement.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="40.0" text="XML File Content">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <ScrollPane layoutX="14.0" layoutY="60.0" prefHeight="528.0" prefWidth="481.0">
+         <content>
+            <TextArea onDragDropped="#droppingOnXmlFileContentTextArea" onDragOver="#draggingOverXmlFileContentTextArea" onKeyTyped="#xmlFileContentTextAreaKeyTyped" prefHeight="526.0" prefWidth="478.0" promptText="You can Drag and Drop XML Files here" fx:id="xmlFileContentTextArea" />
+         </content>
+      </ScrollPane>
+      <Separator layoutX="500.0" layoutY="51.0" orientation="VERTICAL" prefHeight="537.0" prefWidth="1.0" />
+      <Label layoutX="510.0" layoutY="40.0" text="XQUERY File Content">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <ScrollPane layoutX="510.0" layoutY="60.0" prefHeight="216.0" prefWidth="503.0">
+         <content>
+            <TextArea onDragDropped="#droppingOnXQUERYFileContentTextArea" onDragOver="#draggingOverXQUERYFileContentTextArea" onKeyTyped="#xqueryFileContentTextAreaKeyTyped" prefHeight="214.0" prefWidth="500.0" promptText="You can Drag and Drop XQUERY Files here" fx:id="xqueryFileContentTextArea" />
+         </content>
+      </ScrollPane>
+      <MenuBar layoutY="6.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="addXmlMenuItem" mnemonicParsing="false" onAction="#addXmlMenuItemClicked" text="Import XML File" />
+                  <MenuItem fx:id="addXQUERYMenuItem" mnemonicParsing="false" onAction="#addXQUERYMenuItemClicked" text="Import XQUERY File" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="saveXmlMenuItem" disable="true" mnemonicParsing="false" onAction="#saveXmlMenuItemClicked" text="Save Xml File" />
+                  <MenuItem fx:id="saveXqueryMenuItem" disable="true" mnemonicParsing="false" onAction="#saveXqueryMenuItemClicked" text="Save Xquery File" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="dropXmlFileMenuItem" disable="true" mnemonicParsing="false" onAction="#dropXmlFileMenuItemClicked" text="Drop XLM File" />
+                  <MenuItem fx:id="dropXqueryFileMenuItem" disable="true" mnemonicParsing="false" onAction="#dropXqueryFileMenuItemClicked" text="Drop XQUERY File" />
+                  <MenuItem fx:id="saveResultOutPutMenuItem" disable="true" mnemonicParsing="false" onAction="#saveResultOutPutMenuItemClicked" text="Save Result Output" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#closeMenuItemClicked" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+              <items>
+                <MenuItem fx:id="editXmlFileMenuItem" mnemonicParsing="false" onAction="#editXmlFileMenuItemClicked" text="Edit XML File content" />
+                  <MenuItem fx:id="editXqueryFileMenuItem" mnemonicParsing="false" onAction="#editXqueryFileMenuItemClicked" text="Edit XQUERY File content" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem fx:id="howToUseMenuItem" mnemonicParsing="false" onAction="#howToUseMenuItemClicked" text="How to use?" />
+                  <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#aboutMenuItemClicked" text="About" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="saveXmlFileButton" disable="true" layoutX="405.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#saveXmlFileButtonClicked" text="Save XML File" />
+      <Button fx:id="saveXQUERYFileButton" disable="true" layoutX="909.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#saveXQUERYFileButtonClicked" text="Save Xquery File" />
+      <Button fx:id="dropXqueryFileButton" disable="true" layoutX="789.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#dropXqueryFileButtonClicked" text="Drop XQUERY File" />
+      <Button fx:id="dropXmlFileButton" disable="true" layoutX="305.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#dropXmlFileButtonClicked" text="Drop XML File" />
+      <Button fx:id="saveResultOutputButton" disable="true" layoutX="903.0" layoutY="562.0" mnemonicParsing="false" onMouseClicked="#saveResultOutputButtonClicked" text="Save result output" />
+   </children>
+</Pane>
